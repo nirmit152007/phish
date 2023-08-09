@@ -1,0 +1,25 @@
+# Node.js / npm
+node_modules/
+npm-debug.log
+
+# User-specific files
+.vscode/
+.idea/
+
+# Ignore the data.txt file (contains sensitive data)
+data.txt
+
+# Ignore generated files
+*.log
+*.txt
+
+# Ignore the environment file (if you're using one)
+.env
+
+# Ignore the build output (if any)
+/dist/
+/out/
+
+# Ignore system and hidden files
+.DS_Store
+Thumbs.db
