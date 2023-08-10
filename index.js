@@ -38,8 +38,14 @@ app.get('/login', (req, res) => {
 });
 
 // Warning page
-app.get('/warning', (req, res) => {
-    res.render('warning');
+app.get('/warning', async (req, res) => {
+    try {
+        const users = await User.find();
+        res.render('warning', { users });
+    } catch (err) {
+        console.error('Error retrieving data from MongoDB:', err);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 // Handle login data
